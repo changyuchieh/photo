@@ -1,0 +1,23 @@
+<body>
+  <div id="container">
+    <div class="test">
+      <div class="test1"><%= link_to "Architectural Inspiration", pictures_path %></div>
+      <div class="test2">
+        <ul>
+          <li><%= link_to "首頁", pictures_path %></li>
+          <li><%= link_to "註冊", '#' %></li>
+          <li><%= link_to "登入", '#' %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="test3"><%= image_tag("封面7.png", size: "837x630")%></div>
+
+    <div class="test4">
+
+      <%= link_to "新增文章", new_picture_path %>
+      <%= link_to "文章瀏覽", article_index_path %>
+
+    </div>
+  </div>
+</body>

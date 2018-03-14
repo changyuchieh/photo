@@ -1,0 +1,33 @@
+<div id="container">
+  <div class="test">
+    <div class="test1"><%= link_to "Architectural Inspiration", pictures_path %></div>
+    <div class="test2">
+      <ul>
+        <li><%= link_to "首頁", pictures_path %></li>
+        <li><%= link_to "註冊", '#' %></li>
+        <li><%= link_to "登入", '#' %></li>
+      </ul>
+    </div>
+  </div>
+  <h1>文章列表</h1>
+  <div class="test5"><%= link_to "新增文章", new_picture_path %></div>
+  <table>
+    <thead>
+      <tr>
+        <td>標題</td>
+        <td>地點</td>
+        <td>內文</td>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @pictures.each do |picture|%>
+      <tr>
+        <td><%= picture.title %></td>
+        <td><%= picture.place %></td>
+        <td><%= picture.content %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

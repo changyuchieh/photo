@@ -1,0 +1,26 @@
+<div id="container">
+  <div class="test">
+    <div class="test1"><%= link_to "Architectural Inspiration", pictures_path %></div>
+    <div class="test2">
+      <ul>
+        <li><%= link_to "首頁", pictures_path %></li>
+        <li><%= link_to "註冊", '#' %></li>
+        <li><%= link_to "登入", '#' %></li>
+      </ul>
+    </div>
+  </div>
+  <h1>編輯文章</h1>
+  <%= form_for(@picture) do |f| %>
+    <%= f.label :title, "標題" %>
+    <%= f.text_field :title %> <br />
+
+    <%= f.label :place, "地點" %>
+    <%= f.text_field :place %> <br />
+
+    <%= f.label :content, "內文" %>
+    <%= f.text_field :content %> <br />
+
+    <%= f.submit %>
+  <% end %>
+
+</div>
