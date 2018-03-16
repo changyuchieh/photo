@@ -8,11 +8,35 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'one' %>
 
   </head>
 
   <body>
-
-    <%= yield %>
+    <div id="first">
+      <div class="test">
+        <div class="test1"><%= link_to "Architectural Inspiration", pictures_path %></div>
+        <div class="test2">
+          <ul>
+            <li><%= link_to "首頁", pictures_path %></li>
+            <% if user_signed_in? %>
+              <% current_user.email %>
+              <li><%= link_to '登出', destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to '登入', new_user_session_path %></li>
+              <li><%= link_to '註冊', new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <%= yield %> 
+    </div>
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  
   </body>
 </html>

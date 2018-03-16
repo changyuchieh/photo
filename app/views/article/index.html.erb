@@ -1,23 +1,11 @@
-<div id="container">
-  <div class="test">
-    <div class="test1"><%= link_to "Architectural Inspiration", pictures_path %></div>
-    <div class="test2">
-      <ul>
-        <li><%= link_to "首頁", pictures_path %></li>
-        <li><%= link_to "註冊", '#' %></li>
-        <li><%= link_to "登入", '#' %></li>
-      </ul>
-    </div>
-  </div>
   <h1>文章列表</h1>
-  <div class="test5"><%= link_to "新增文章", new_picture_path %></div>
-  <table>
+  <div class="test5"><%= link_to "新增文章", new_picture_path, class: "btn btn-warning btn-md" %></div>
+  <table class="table">
     <thead>
       <tr>
-        <td>標題</td>
-        <td>地點</td>
-        <td>內文</td>
-
+        <td style= "width:10%">標題</td>
+        <td style= "width:15%">地點</td>
+        <td style= "width:75%">內文</td>
       </tr>
     </thead>
     <tbody>
@@ -26,8 +14,10 @@
         <td><%= picture.title %></td>
         <td><%= picture.place %></td>
         <td><%= picture.content %></td>
+        <td><%= link_to "編輯", edit_picture_path(picture), class: "btn btn-primary btn-sm" %></td>
+        <td><%= link_to "刪除", picture_path(picture), method: "delete", data: { confirm: "確認刪除" }, class: "btn btn-danger btn-sm" %></td>
       </tr>
       <% end %>
     </tbody>
   </table>
-</div>
+

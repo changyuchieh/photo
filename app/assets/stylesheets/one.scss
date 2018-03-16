@@ -4,18 +4,17 @@ body{
   padding:0;
   background:#FFF;
 }
-#container{
-  height:900px;
+#first{
   margin-top:0px;
-  background: -webkit-linear-gradient(white,#FFFFBB);
-  background: -o-linear-gradient(white,#FFFFBB);
-  background: -moz-linear-gradient(white,#FFFFBB);
-  background: linear-gradient(white,#FFFFBB);
+  // background: -webkit-linear-gradient(white,#FFFFBB);
+  // background: -o-linear-gradient(white,#FFFFBB);
+  // background: -moz-linear-gradient(white,#FFFFBB);
+  // background: linear-gradient(white,#FFFFBB);
 }
 .test{
-  background-color: 	#FFFFFF;
   display: inline-block;
   width: 100%;
+  background:#DDDDDD;
 }
 .test1{
   height:auto;
@@ -23,6 +22,7 @@ body{
   float: left;
   display: inline-block;
   padding: 15px 0 10px 20px;
+  
 
 }
 .test1 a{
@@ -33,9 +33,9 @@ body{
 .test2{
   display: inline-block;
   height:auto;
-  width: 15%;
+  width: 20%;
   float: right;
-  padding: 0 20px 10px 15px;
+  padding: 15px 20px 10px 15px;
   word-spacing: 10px;
 }
 .test2 ul li{
