@@ -1,9 +1,15 @@
-
-  
-  <%= simple_form_for(picture) do |f| %>
+<%= simple_form_for(picture) do |f| %>
   <%= f.input :title, label: "標題" %>
-  <%= f.input :place, label: "地點" %>
+  <%= f.input :name, label: "簡短描述" %>
+  <!--<%= f.input :place, label: "地點" %>-->
   <%= f.input :content, label: "內文" %>
-    
-  <%= f.submit %>
-  <% end %>
+  
+  <!--<div class="form-group">-->
+  <!--    <label for="exampleFormControlFile1">file input</label>-->
+  <!--    <%= f.file_field :album, class: "form-control-file", id: "exampleFormControlFile1" %>-->
+  <!--</div>-->
+  
+  <%= f.submit class: "btn btn-primary btn-md" %>
+  <%= link_to "首頁", pictures_path,  class: "btn btn-warning btn-md" %>
+  
+<% end %>

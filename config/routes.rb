@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   resources :pictures
   resources :article, only: [:index]
   root to: "pictures#index"
+  
+  # resources :photos do
+  #   get "serve", :on => :member
+  # end
 end

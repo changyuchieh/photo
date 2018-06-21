@@ -1,8 +1,4 @@
-
-  <h1>編輯文章</h1>
-  <%= render "form", picture: @picture %>
-  
-  <br />
-  <%= link_to "首頁", pictures_path %>
-
-
+<h1><%= @picture.title %></h1>
+<%= render "form", picture: @picture %>
+<br />
+<!--<%= link_to "首頁", pictures_path %>-->

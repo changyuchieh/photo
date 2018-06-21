@@ -1,23 +1,76 @@
-  <h1>文章列表</h1>
-  <div class="test5"><%= link_to "新增文章", new_picture_path, class: "btn btn-warning btn-md" %></div>
-  <table class="table">
-    <thead>
-      <tr>
-        <td style= "width:10%">標題</td>
-        <td style= "width:15%">地點</td>
-        <td style= "width:75%">內文</td>
-      </tr>
-    </thead>
-    <tbody>
-      <% @pictures.each do |picture|%>
-      <tr>
-        <td><%= picture.title %></td>
-        <td><%= picture.place %></td>
-        <td><%= picture.content %></td>
-        <td><%= link_to "編輯", edit_picture_path(picture), class: "btn btn-primary btn-sm" %></td>
-        <td><%= link_to "刪除", picture_path(picture), method: "delete", data: { confirm: "確認刪除" }, class: "btn btn-danger btn-sm" %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+<%= stylesheet_link_tag    'one' %>
+<%= javascript_include_tag "application" "data-turbolinks-track" => true %>
+<%= javascript_include_tag "dragula" "data-turbolinks-track" => true %>
 
+<h1>文章瀏覽</h1>
+<%= link_to "新增文章", new_picture_path, class: "btn btn-warning btn-md m-3" %>
+<!--<table class="table">-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <td style= "width:10%">標題</td>-->
+<!--      <td style= "width:15%">地點</td>-->
+<!--      <td style= "width:45%">內文</td>-->
+      
+<!--    </tr>-->
+<!--  </thead>-->
+<!--  <tbody>-->
+<!--    <% @pictures.each do |picture|%>-->
+<!--    <tr>-->
+<!--      <td><%= link_to picture.title, edit_picture_path(picture) %></td>-->
+<!--      <td><%= picture.place %></td>-->
+<!--      <td><%= picture.content %></td>-->
+      
+<!--      <td><%= link_to "編輯", edit_picture_path(picture), class: "btn btn-primary btn-sm" %></td>-->
+<!--      <td><%= link_to "刪除", picture_path(picture), method: "delete", data: { confirm: "確認刪除" }, class: "btn btn-danger btn-sm" %></td>-->
+<!--    </tr>-->
+<!--    <% end %>-->
+<!--  </tbody>-->
+<!--</table>-->
+
+<!--<div class="card-columns">-->
+<!--  <% @pictures.each do |picture|%>-->
+<!--    <div class="card p-3 border-shadow" id="shadow">-->
+<!--      <div class="blockquote mb-0 card-body">-->
+<!--        <h5 class="card-title"><%= link_to picture.title, edit_picture_path(picture) %></h5>-->
+<!--        <p class="card-text"><%= picture.name %></p>-->
+        <!--<p class="card-text"><small class="text-muted"><%= picture.name %></small></p>-->
+<!--        <button type="button" class="btn btn-light float-right"><%= link_to "刪除", picture_path(picture), method: "delete", data: { confirm: "確認刪除" } %></button>-->
+<!--        <button type="button" class="btn btn-light float-right mx-2"><%= link_to "編輯", edit_picture_path(picture) %></button>-->
+<!--        <button type="button" class="btn btn-light float-right"><%= link_to "檢視", picture_path(picture) %></button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  <% end %>-->
+<!--</div>-->
+
+<div class="card-columns">
+  <% n=1 %>
+  <% @pictures.each do |picture|%>
+    <div ondrop="Drop(event)" ondragover="AllowDrop(event)">
+    
+      
+      <div id="<%= n %>" draggable="true" ondragstart="Drag(event)">
+      <% n.to_i%>
+      <% n+=1 %>
+        <div class="card p-3 border-shadow" id="shadow">
+          <div class="blockquote mb-0 card-body">
+            <h5 class="card-title"><%= link_to picture.title, edit_picture_path(picture) %></h5>
+            <p class="card-text"><%= picture.name %></p>
+            <p class="card-text"><small class="text-muted"><%= picture.name %></small></p>
+            <button type="button" class="btn btn-light float-right"><%= link_to "刪除", picture_path(picture), method: "delete", data: { confirm: "確認刪除" } %></button>
+            <button type="button" class="btn btn-light float-right mx-2"><%= link_to "編輯", edit_picture_path(picture) %></button>
+            <button type="button" class="btn btn-light float-right"><%= link_to "檢視", picture_path(picture) %></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div id="Box2" ondrop="Drop(event)" ondragover="AllowDrop(event)">
+  <div id="Img2" draggable="true" ondragstart="Drag(event)">
+    <%= link_to image_tag("garbage.png", class: "w-25 mx-auto d-block") %>
+  </div>
+</div>
+<!--<div id="Box3" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>-->
+<!--<div id="Box4" ondrop="Drop(event)" ondragover="AllowDrop(event)"></div>-->
+<div style="clear:both;"></div>

@@ -14,6 +14,50 @@
 //= require turbolinks
 //= require_tree .
 
-//= require jquery
+//= require jquery3
+//= require popper
 //= require bootstrap-sprockets
+
+function AllowDrop(event){
+    event.preventDefault();
+}
+function Drag(event){
+    event.dataTransfer.setData("text",event.currentTarget.id);
+}
+function Drop(event){
+    event.preventDefault();
+    var data=event.dataTransfer.getData("text");
+   // event.currentTarget.appendChild(document.getElementById(data));
+    
+    var list = document.getElementById(data);
+    list.parentNode.removeChild(list);
+    // while (list.hasChildNodes()) {
+        
+    // }
+
+}
+    
+    // var objConnection = new ActiveXObject("adodb.connection");
+    // var strConn = "driver={sql server};server=QITBLRQIPL030;database=adventureworks;uid=sa;password=12345";
+    // objConnection.Open(strConn);
+    // var rs = new ActiveXObject("ADODB.Recordset");
+    // var strQuery = "SELECT * FROM  Person.Address";
+    // rs.Open(strQuery, objConnection);
+    // rs.MoveFirst();
+    // while (!rs.EOF) {
+    //     document.write(rs.fields(0) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+    //     document.write(rs.fields(1) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+    //     document.write(rs.fields(2) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
+    //     document.write(rs.fields(3) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
+    //     document.write(rs.fields(4) + "<br/>");
+    //     rs.movenext();
+    // }    
+        // DELETE FROM Pictures
+        // WHERE Picture.title ='text';
+    
+    
+    
+    
+
+
 

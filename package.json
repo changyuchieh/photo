@@ -1,5 +1,7 @@
 {
   "name": "photo",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "dragula": "^3.7.2"
+  }
 }
