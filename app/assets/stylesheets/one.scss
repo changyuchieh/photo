@@ -4,26 +4,13 @@ body{
 .word{
   font-size: 20px;
 }
-body{
-  position:relative;
+.container{
+  margin-bottom: 220px;  
 }
-#footer{
+footer{
   color: #fff;
-  position: relative;
-  margin-top: -180px;
-  height: 180px;
-  clear:both;
   bottom: 0;
-  // width: 100%;
-  // height: auto;
-  // box-sizing: border-box;
-  // position:fixed;
-  // left:0;
-  // z-index:1;
-  // position:absolute; 
-  // grid-row-start: 2;
-  // grid-row-end: row-end;
-  
+  text-align: center;
 }
 .img{
   margin:0 auto;
@@ -45,10 +32,17 @@ body{
     -webkit-transition:color 0s;
     -o-transition:color 0s;    
 }
-#Box2,#Box3,#Box4{
+#Box{
     width:100%;
-    height:auto;
+    height:150px;
     padding:10px;
     border:1px #ccc dashed;
     margin: 0 auto;
+}
+#Img{
+  width: 100%;
+  height: auto;
+  max-width:  100%;
+  display:  middle;
+  transform:translateY(50%);
 }
