@@ -4,8 +4,9 @@
     <div id="shadow" class="card w-75 img">
       <h5 class="card-header"><%= @picture.title %></h5>
       <div class="card-body">
+        
         <!--<h5 class="card-title"><%= @picture.title %></h5>-->
-        <h6 class="card-text"><%= @picture.name %></h6>
+        <h6 class="card-text"><%= @picture.place %></h6>
         <hr />
         <p class="card-text"><%= @picture.content %></p>
         <button type="button" class="btn btn-light float-right"><%= link_to "刪除", picture_path(@picture), method: "delete", data: { confirm: "確認刪除" } %></button>

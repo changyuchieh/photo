@@ -1,6 +1,6 @@
 <%= simple_form_for(picture) do |f| %>
   <%= f.input :title, label: "標題" %>
-  <%= f.input :name, label: "簡短描述" %>
+  <%= f.input :place, label: "簡短描述" %>
   <%= f.input :content, label: "內文" %>
   <%= f.submit class: "btn btn-primary btn-md" %>
   <%= link_to "首頁", pictures_path,  class: "btn btn-warning btn-md" %>

@@ -14,8 +14,8 @@
         <div class="card p-3 border-shadow" id="shadow">
           <div class="blockquote mb-0 card-body">
             <h5 class="card-title"><%= link_to picture.title, edit_picture_path(picture) %></h5>
-            <p class="card-text"><%= picture.name %></p>
-            <p class="card-text"><small class="text-muted"><%= picture.name %></small></p>
+            <p class="card-text"><%= picture.place %></p>
+            <!--<p class="card-text"><small class="text-muted"><%= picture.content %></small></p>-->
             <button type="button" class="btn btn-light float-right"><%= link_to "刪除", picture_path(picture), method: "delete", data: { confirm: "確認刪除" } %></button>
             <button type="button" class="btn btn-light float-right mx-2"><%= link_to "編輯", edit_picture_path(picture) %></button>
             <button type="button" class="btn btn-light float-right"><%= link_to "檢視", picture_path(picture) %></button>
