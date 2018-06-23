@@ -13,12 +13,14 @@
     <%= stylesheet_link_tag    'one' %>
 
   </head>
+  
   <body>
-    <%= render 'shared/navbar' %>
+  <%= render 'shared/navbar' %>
     <div class="container">
       <%= render "shared/flash" if notice %>
       <%= yield %> 
     </div>
-    <%= render 'shared/footer' %>
+  <%= render 'shared/footer' %>
   </body>
+  
 </html>
